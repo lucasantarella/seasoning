@@ -1,19 +1,6 @@
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 #include "php.h"
+#include "seasoning.h"
  
-#define PHP_EXTENSION_VERSION "1.0"
-#define PHP_EXTENSION_EXTNAME "seasoning"
- 
-extern zend_module_entry seasoning_module_entry;
-#define phpext_seasoningn_ptr &seasoningn_module_entry
- 
-// declaration of a custom my_function()
-PHP_FUNCTION(seasoning_salt);
-PHP_FUNCTION(seasoning_pw);
-PHP_FUNCTION(seasoning_weave);
-
 // list of custom PHP functions provided by this extension
 // set {NULL, NULL, NULL} as the last record to mark the end of list
 static function_entry functions[] = {
@@ -50,3 +37,16 @@ PHP_FUNCTION(seasoning_salt)
     RETURN_STRING("This is my function", 1);
 }
 
+// implementation of a custom my_function()
+PHP_FUNCTION(seasoning_pw)
+{
+
+    RETURN_STRING("This is my function", 1);
+}
+ 
+// implementation of a custom my_function()
+PHP_FUNCTION(seasoning_weave)
+{
+
+    RETURN_STRING("This is my function", 1);
+}
